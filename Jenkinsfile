@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       agent {
-        node {
-          label 'node'
+        docker {
+          image 'node'
         }
 
       }
