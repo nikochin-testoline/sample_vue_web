@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        nodejs 'NodeJS'
         sh 'npm run build'
       }
     }
