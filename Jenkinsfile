@@ -3,10 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        nodejs('NodeJS') {
-          sh 'npm config ls'
-        }
-
+        nodejs 'NodeJS'
         sh 'npm run build'
       }
     }
