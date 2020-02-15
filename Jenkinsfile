@@ -2,15 +2,16 @@ pipeline {
   agent any
   stages {
     stage('Install') {
-          steps {
-            sh 'npm i -g vue'
-          }
-        }
+      steps {
+        sh 'npm i vue'
+      }
+    }
+
     stage('Build') {
-          steps {
-            sh 'npm run build'
-          }
-        }
+      steps {
+        sh 'npm run build'
+      }
+    }
 
   }
   tools {
