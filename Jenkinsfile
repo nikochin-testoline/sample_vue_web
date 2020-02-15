@@ -1,22 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            sh '''npm config ls
-npm run build'''
-          }
-        }
-
-        stage('Install') {
+    stage('Install') {
           steps {
             sh 'npm i -g vue'
           }
         }
-
-      }
+    stage('Build') {
+      stage('Build') {
+          steps {
+            sh 'npm run build'
+          }
+        }
     }
 
   }
