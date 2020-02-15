@@ -4,10 +4,10 @@ pipeline {
     stage('Build') {
       steps {
         nodejs('NodeJS') {
-          sh 'npm config ls'
+          sh '''npm config ls
+npm run build'''
         }
 
-        sh 'npm run build'
       }
     }
 
