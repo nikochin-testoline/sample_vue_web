@@ -2,8 +2,8 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        sh 'npm run build'
+      nodejs(nodeJSInstallationName: 'Node 6.x') {
+        sh 'npm config ls'
       }
     }
 
